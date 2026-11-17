@@ -1,0 +1,54 @@
+https://chatgpt.com/c/69a5fad9-4d94-8387-9475-844f9b7e64a7 (paper 1)
+
+https://chatgpt.com/c/69aa1b25-e760-8389-b787-cc81a30db525 (paper 2)
+
+https://chatgpt.com/c/69ab8fc6-e34c-8392-b1af-6cdf74bc92c0 (paper 3)   	https://github.com/Tencent/TFace/tree/master/attribute/M3DFEL
+
+https://chatgpt.com/c/69ad87b8-a9bc-8387-96e5-0d541c280103 (paper04)   	https://github.com/zengqunzhao/Former-DFER				Spatial Part => https://chatgpt.com/c/6a1c8de6-75f8-83eb-9f1e-8a2df83a7e8b
+
+https://chatgpt.com/c/69b36d40-9be4-838c-ae65-2332c0c043b9 (paper05)  	https://github.com/zengqunzhao/DFER-CLIP
+
+https://chatgpt.com/c/69b61234-7ba8-8392-9ed0-f14664d9a1bc (paper06)    https://github.com/state-spaces/mamba?utm_source=chatgpt.com
+
+
+
+
+
+
+
+
+
+
+
+💡 What YOU should show in thesis
+
+To satisfy this statement, you should:
+
+Implement / compare:
+
+Simple model (baseline)
+
+Complex model (e.g., Mamba / Transformer / LSTM)
+
+Compare:
+
+Accuracy 📈
+
+Speed ⚡
+
+Computational cost 💻
+
+Conclude:
+
+Is complexity worth it?
+
+
+
+
+
+
+
+Dataset Which Is Below:
+
+Lab-Controlled				CK+, MMI, Oulu-CASIA
+Real-World (In-the-Wild)		AFEW, DFEW, FERV39K

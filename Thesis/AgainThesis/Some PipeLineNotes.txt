@@ -1,0 +1,230 @@
+1. Video Input
+      ↓
+2. Dataset Selection
+   (CK+, MMI, Oulu-CASIA, AFEW, DFEW, FERV39k)
+      ↓
+3. Frame Sampling
+   - uniform sampling
+   - random sampling
+   - key-frame selection
+      ↓
+4. Preprocessing
+   - face detection
+   - face alignment
+   - normalization
+   - data augmentation
+      ↓
+5. Input Improvement
+   - whole face / facial parts
+   - attention mechanism
+   - landmark extraction
+      ↓
+6. Spatial Feature Extraction
+   - CNN per frame
+   (ResNet / VGG / MobileNet)
+      ↓
+7. Temporal Modeling
+   - BiLSTM / Transformer / 3D CNN
+      ↓
+8. Advanced Improvements (optional)
+   - frame aggregation
+   - expression intensity modeling
+   - multitask learning
+   - PPDN
+      ↓
+9. Feature Fusion
+   - combine spatial + temporal features
+      ↓
+10. Classifier
+   - Fully Connected Layer
+   - Softmax
+      ↓
+11. Final Emotion Prediction
+   (Happy, Sad, Angry, Fear, Surprise, Disgust, Neutral)
+
+
+
+12. Evaluation Metrics											(Evaluation metrics belong after the prediction stage, because they measure how well the model performed).
+   - Accuracy
+   - Recall
+   - F1-score
+   - WAR (Weighted Average Recall)
+   - UAR (Unweighted Average Recall)
+   - Confusion Matrix
+
+
+-----------------------------------------------------------------(Combination Paper 01 and 02) Up 
+
+
+
+1. Video Input
+      ↓
+2. Dataset Selection
+   (CK+, MMI, Oulu-CASIA, AFEW, DFEW, FERV39K)
+      ↓
+3. Frame Sampling				(sirf important sample ko uthana {choose important frames})
+   - uniform sampling
+   - optional key-frame selection
+      ↓
+4. Preprocessing
+   - face detection
+   - face alignment
+   - normalization
+   - data augmentation
+      ↓
+5. Spatial Feature Extraction
+   - 2D CNN per frame
+   (ResNet18 / MobileNet / EfficientNet-B0)
+      ↓
+6. Temporal Modeling
+   - BiLSTM / GRU / lightweight Transformer
+      ↓
+7. Attention-Based Frame Aggregation			Gives higher weight to important emotional frames and lower weight to irrelevant ones.						
+   - weight important frames more
+      ↓
+8. Feature Fusion
+   - combine frame-level spatial features
+     with temporal context
+      ↓
+9. Classifier
+   - Fully Connected Layer
+   - Softmax
+      ↓
+10. Final Emotion Prediction
+   (Happy, Sad, Angry, Fear, Surprise, Disgust, Neutral)
+
+
+11. 12. Evaluation Metrics											(Evaluation metrics belong after the prediction stage, because they measure how well the model performed).
+   - Accuracy
+   - Recall
+   - F1-score
+   - WAR (Weighted Average Recall)
+   - UAR (Unweighted Average Recall)
+   - Confusion Matrix
+
+
+-----------------------------------------------------------------(Combination Paper 01 and 02 and 03) Up 
+
+
+1. Video Input
+      ↓
+2. Dataset Selection
+   (CK+, MMI, Oulu-CASIA, AFEW, DFEW, FERV39K)
+      ↓
+3. Frame Sampling
+   - uniform sampling
+   - optional key-frame selection
+      ↓
+4. Preprocessing
+   - face detection						     (Face-Focused Input Representation)
+   - face alignment						     (Face-Focused Input Representation)
+   - resizing and normalization                                      (Input Enhancement)
+   - light data augmentation					     (Input Enhancement)
+      ↓
+5. Spatial Feature Extraction
+   - lightweight 2D CNN per frame
+   (ResNet18 / MobileNetV3 / EfficientNet-B0)
+      ↓
+6. Temporal Modeling
+   - BiLSTM / GRU / lightweight Transformer
+      ↓
+7. Attention-Based Frame Aggregation
+   - assign higher weight to emotionally important frames
+   - suppress irrelevant or redundant frames
+      ↓
+8. Feature Fusion
+   - combine spatial frame features
+     with temporal context representation
+      ↓
+9. Classifier
+   - Fully Connected Layer
+   - Softmax
+      ↓
+10. Final Emotion Prediction
+   (Happy, Sad, Angry, Fear, Surprise, Disgust, Neutral)
+      ↓
+11. Evaluation
+   - Accuracy
+   - Precision
+   - Recall
+   - F1-score
+   - WAR
+   - UAR
+   - Confusion Matrix
+
+
+
+-----------------------------------------------------------------(Combination Paper 01 and 02 and 03 and 04) Up 
+
+
+Video Input
+      ↓
+Frame Sampling
+      ↓
+CLIP Image Encoder
+      ↓
+Frame Feature Vectors
+      ↓
+Temporal Transformer
+      ↓
+Video Feature Vector
+      ↓
+Text Descriptions of Emotions
+      ↓
+CLIP Text Encoder
+      ↓
+Similarity Matching
+      ↓
+Emotion Prediction
+
+
+
+---------------------------------------------------------(Just paper 05 Pipeline)
+
+
+Video Input
+↓
+Frame Sampling
+↓
+Face Detection / Face Cropping
+↓
+Face Alignment
+↓
+Resize + Normalization
+↓
+Per-frame Spatial Feature Extraction
+(CNN / ResNet / EfficientNet / MobileNet)
+↓
+Feature Sequence
+[f1, f2, f3, ..., fT]
+↓
+Linear Projection / Expansion                       |
+↓						    |
+Split into Branches				    |
+↓						    |
+Local Convolution				    |
+↓						    |
+Selective SSM (Mamba core)			    |
+↓						    |-------------------->>>>>  MAMBA 
+Gating / Activation				    |
+↓						    |
+Linear Projection Back				    |
+↓						    |
+Updated Temporal Features                           |
+[h1, h2, h3, ..., hT]				    |
+↓
+Temporal Pooling / Last State / Attention Pooling     	(Let the model choose which frames are important) Attention Pooling (Best but advanced)
+↓
+Fully Connected Layer				     	This takes final feature and gives scores:
+↓
+SoftMax							Converts scores into probabilities:
+↓
+Emotion Class
+↓
+Evaluation Metrics
+(Accuracy, F1-score, Precision, Recall, UAR/WA if needed)
+
+
+
+
+

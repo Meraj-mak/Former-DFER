@@ -1,0 +1,5 @@
+The training set: set 1
+GFLOPs: 8.31 G
+Params (thop verify): 18.27 M
+********************0********************
+Current learning rate: 0.01

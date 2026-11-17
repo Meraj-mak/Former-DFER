@@ -1,0 +1,3 @@
+GRE For Temporal Part (RNN walai Chez)
+CNN spatial 
+Some parameter for all 
